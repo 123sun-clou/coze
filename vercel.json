@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/api/chat",
-      "destination": "https://api.coze.cn/v3/chat"
+      "source": "/api/coze/：path*",
+      "destination": "https://api.coze.cn/:path*"
     }
   ]
 }
