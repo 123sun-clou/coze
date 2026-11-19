@@ -12,24 +12,19 @@
 <div id="app"></div>
 <script type="text/javascript">
   var webSdkScript = document.createElement('script');
-  webSdkScript.src = 'https://lf-cdn.coze.cn/obj/unpkg/latest/coze/web-sdk/dist/js-umd/index.min.js';
+  webSdkScript.src = 'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/builder-web-sdk/0.1.1-beta.1/dist/umd/index.js';
   document.head.appendChild(webSdkScript);
   webSdkScript.onload = function () {
-    cozeWebSDK.init({
-  projectId: "7709514243300704319", // 去扣子后台复制，千万别用 appId
-  container: "#app",
-  refreshToken: () => Promise.resolve("pat_IKFQ4hBB9UkDH8HspXp4drABdtBSda0F0ijgzUQc98wCdsVphrF4AfT6i6E1FPYF") // 把 pat_ 开头的那串粘到这里
-});
-    // window.cozeWebSDK.init({
-    //   "token": "pat_IKFQ4hBB9UkDH8HspXp4drABdtBSda0F0ijgzUQc98wCdsVphrF4AfT6i6E1FPYF",
-    //   "appId": "7707563789801586730",
-    //   "container": "#app",
-    //    "userInfo": {
-    //      "id": "",
-    //      "url": "",
-    //      "nickname": "User"
-    //    }
-    // });
+    new CozeWebSDK.AppWebSDK({
+      "token": "pat_IKFQ4hBB9UkDH8HspXp4drABdtBSda0F0ijgzUQc98wCdsVphrF4AfT6i6E1FPYF",
+      "appId": "7707563789801586730",
+      "container": "#app",
+      "userInfo": {
+        "id": "",
+        "url": "",
+        "nickname": "User"
+      }
+    });
   }
 </script>
 </body>
