@@ -12,10 +12,10 @@
 <div id="app"></div>
 <script type="text/javascript">
   var webSdkScript = document.createElement('script');
-  webSdkScript.src = 'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/builder-web-sdk/0.1.1-beta.1/dist/umd/index.js';
+  webSdkScript.src = 'https://lf-cdn.coze.cn/obj/unpkg/latest/coze/web-sdk/dist/js-umd/index.min.js';
   document.head.appendChild(webSdkScript);
   webSdkScript.onload = function () {
-    new CozeWebSDK.AppWebSDK({
+    window.cozeWebSDK.init({
       "token": "pat_IKFQ4hBB9UkDH8HspXp4drABdtBSda0F0ijgzUQc98wCdsVphrF4AfT6i6E1FPYF",
       "appId": "7707563789801586730",
       "container": "#app",
